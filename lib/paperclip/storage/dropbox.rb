@@ -48,7 +48,7 @@ module Paperclip
       end
 
       def copy_to_local_file(style = default_style, destination_path)
-        file_contents = nil
+        file_contents = ""
         dropbox_client.download(path(style)) do |chunk|
           file_contents << chunk
         end
